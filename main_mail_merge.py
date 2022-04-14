@@ -21,6 +21,6 @@ with open("Input/Letters/starting_letter.txt", mode="r") as file_template:
 for name in invited_names:
     name_trim = name.strip()
     content = email_template.replace("[name]", name_trim)
-    with open(f"Output/ReadyToSend/{name_trim}.txt", mode="w") as file_to_send:
+    with open(f"Output/ReadyToSend/letter_for_{name_trim}.txt", mode="w") as file_to_send:
         file_to_send.write(content)
 
